@@ -1,12 +1,13 @@
 {
-  "name": "app-bootstrap",
+  "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "offline": "next build && node scripts/offline.mjs"
   },
   "dependencies": {
     "next": "16.3.3",
