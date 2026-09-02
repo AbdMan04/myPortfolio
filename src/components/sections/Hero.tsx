@@ -59,7 +59,7 @@ export default function Hero() {
               <Reveal delay={240}>
                 <div className="flex flex-wrap gap-3">
                   <Link
-                    href="/#work"
+                    href="#work"
                     className="bg-ink px-6 py-3 font-mono text-xs font-semibold uppercase tracking-widest text-paper transition-colors hover:bg-acid hover:text-ink"
                   >
                     View my work ↓
