@@ -29,7 +29,7 @@ function rewriteForFileProtocol() {
     html = html.replaceAll('src="/_next/', 'src="./_next/');
     html = html.replaceAll('href="/_next/', 'href="./_next/');
     html = html.replaceAll('href="/favicon.ico"', 'href="./favicon.ico"');
-    html = html.replaceAll('href="/Resume.pdf"', 'href="./Resume.pdf"');
+    html = html.replaceAll('href="/CV.pdf"', 'href="./CV.pdf"');
     html = html.replaceAll('href="/resume"', 'href="./resume.html"');
     if (file === "index.html") {
       html = html.replaceAll('href="/#', 'href="#');
@@ -76,7 +76,7 @@ function bundleSingleFile() {
     .replaceAll('href="./_next/', 'href="/_next/')
     .replaceAll('href="./resume.html"', 'href="/resume"')
     .replaceAll('href="./favicon.ico"', 'href="/favicon.ico"')
-    .replaceAll('href="./Resume.pdf"', 'href="/Resume.pdf"')
+    .replaceAll('href="./CV.pdf"', 'href="/CV.pdf"')
     .replaceAll('href="./index.html#', 'href="/#');
 
   html = html.replace(
@@ -128,8 +128,8 @@ const shim = (path) =>
     /<link[^>]*(?:preload|modulepreload|prefetch)[^>]*\/?>/g,
     ""
   );
-  html = html.replaceAll('href="/Resume.pdf"', 'href="Resume.pdf"');
-  html = html.replaceAll('href="/resume"', 'href="Resume.pdf"');
+  html = html.replaceAll('href="/CV.pdf"', 'href="CV.pdf"');
+  html = html.replaceAll('href="/resume"', 'href="CV.pdf"');
   html = html.replaceAll('href="/#', 'href="#');
   html = html.replace('<html lang="en"', '<html lang="en"');
 
@@ -142,6 +142,6 @@ mkdirSync(dist, { recursive: true });
 bundleSingleFile();
 rewriteForFileProtocol();
 cpSync(out, join(dist, "site"), { recursive: true });
-copyFileSync(join(out, "Resume.pdf"), join(dist, "Resume.pdf"));
+copyFileSync(join(out, "CV.pdf"), join(dist, "CV.pdf"));
 
 console.log("done →", relative(root, dist));

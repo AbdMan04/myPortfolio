@@ -15,7 +15,7 @@ export const profile = {
   githubHandle: "AbdMan04",
   linkedin: "https://www.linkedin.com/in/abdman04/",
   linkedinHandle: "abdman04",
-  resumeUrl: "/Resume.pdf",
+  resumeUrl: "/CV.pdf",
   teco: "Software Engineer & Mobile Developer — building Flutter mobile apps and React web apps, currently completing a BSc in Software Engineering at Jordan University of Science andTechnology.",
 };
 
